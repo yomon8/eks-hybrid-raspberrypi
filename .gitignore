@@ -1,0 +1,6 @@
+.terraform
+.terraform**
+terraform.*
+vars/env.tfvars
+vars/backend.tfvars
+output/setup.sh
