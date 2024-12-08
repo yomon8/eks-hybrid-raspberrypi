@@ -1,0 +1,43 @@
+{
+    "name": "eks-hybrid-raspberrypi",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "mounts": [
+        "source=${env:HOME}${env:USERPROFILE}/.kube/,target=/home/vscode/.kube/,type=bind",
+        "source=${env:HOME}${env:USERPROFILE}/.aws/,target=/home/vscode/.aws/,type=bind",
+        "source=${env:HOME}${env:USERPROFILE}/.ssh/,target=/home/vscode/.ssh/,type=bind"
+    ],
+    "features": {
+        "ghcr.io/devcontainers/features/git:1": {},
+        "ghcr.io/rio/features/k9s:1": {},
+        "ghcr.io/rio/features/kustomize:1": {},
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
+    },
+    "runArgs": [],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                // K8s
+                "ms-kubernetes-tools.vscode-kubernetes-tools",
+                "redhat.vscode-yaml",
+                "tamasfe.even-better-toml",
+                "ipedrazas.kubernetes-snippets",
+                "mindaro.mindaro",
+                // Terraform
+                "HashiCorp.terraform",
+                "ms-vscode.makefile-tools",
+                "ms-azuretools.vscode-docker",
+                "saramorillon.terraform-graph",
+                // Docs
+                "hediet.vscode-drawio",
+                "yzhang.markdown-all-in-one",
+                "bierner.github-markdown-preview",
+                "bierner.markdown-mermaid"
+            ],
+            "settings": {}
+        }
+    },
+    "remoteUser": "vscode"
+}
