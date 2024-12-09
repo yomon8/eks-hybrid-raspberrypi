@@ -146,7 +146,7 @@ module "eks" {
 
   cluster_remote_network_config = {
     remote_node_networks = {
-      cidrs = [var.home_network_cidr]
+      cidrs = [var.node_network_cidr]
     }
     remote_pod_networks = {
       cidrs = [var.pod_network_cidr]
@@ -212,7 +212,7 @@ systemctl enable ipsec
 
 #############################
 # AppArmor無効化
-# ※ 今回は本題で無いので無効化していますが本当は細かく設定してください
+# ※ 今回は本題で無いので無効化していますが本来は必要な部分のみ許可してください
 #############################
 systemctl disable apparmor
 systemctl stop apparmor

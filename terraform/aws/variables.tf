@@ -16,7 +16,9 @@ variable "home_network_cidr" {
 variable "home_pi_private_ip" {
   type = string
 }
-
+variable "node_network_cidr" {
+  type = string
+}
 variable "pod_network_cidr" {
   type = string
 }

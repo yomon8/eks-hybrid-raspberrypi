@@ -29,6 +29,7 @@ data "aws_network_interfaces" "eks" {
     name   = "group-id"
     values = [module.eks.cluster_security_group_id]
   }
+  depends_on = [module.eks.time_sleep]
 }
 data "aws_network_interface" "eks" {
   id = data.aws_network_interfaces.eks.ids[0]
