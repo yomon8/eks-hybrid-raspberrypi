@@ -1,2 +1,5 @@
+# AWS Region
 region = "ap-northeast-1"
+
+# Terraform Stateファイルの保存用のバケット
 bucket = "your-terraform-state-tmp"
