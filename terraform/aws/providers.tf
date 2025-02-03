@@ -2,12 +2,12 @@ terraform {
   required_version = ">= v1.10.1"
   required_providers {
     aws = {
-      version = "= 5.80.0"
+      version = ">= 5.80.0"
       source  = "hashicorp/aws"
     }
     kubernetes = {
       source  = "hashicorp/kubernetes"
-      version = "= 2.34.0"
+      version = ">= 2.34.0"
     }
   }
   backend "s3" {
